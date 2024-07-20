@@ -1,0 +1,200 @@
+---
+import MusicPlayer from "../components/MusicPlayer.astro";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - CARTEL DE PERÚ NUEVA GENERACIÓN</title>
+    <meta name="description" content="Contáctanos en CARTEL DE PERÚ NUEVA GENERACIÓN." />
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+      body {
+        margin: 0;
+        color: #fff;
+        font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+        text-align: center;
+        background: #021027;
+        overflow: hidden;
+      }
+
+      .navbar {
+        background-color: #000;
+        padding: 1rem;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+
+      .navbar ul li {
+        display: inline;
+      }
+
+      .navbar ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+      }
+
+      .content {
+        position: relative;
+        padding: 2rem;
+        height: 75vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .popup {
+        position: absolute;
+        background-color: red;
+        color: white;
+        padding: 10px;
+        border: 3px solid yellow;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        animation: move-and-change 3s infinite;
+        z-index: 10;
+      }
+
+      .popup img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+      }
+
+      .popup-static {
+        position: absolute;
+        background-color: red;
+        color: white;
+        padding: 10px;
+        border: 3px solid yellow;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        z-index: 10;
+      }
+
+      .popup-static img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+      }
+
+      .aberrant-text {
+        font-size: 2rem;
+        color: yellow;
+        animation: spin-and-color 5s infinite;
+        margin: 20px;
+      }
+
+      .aberrant-image img {
+        width: 100px;
+        height: 100px;
+        background-image: url("dinero.jpg");
+        animation: grow-and-shrink 2s infinite alternate;
+        margin: 20px;
+      }
+
+      @keyframes move-and-change {
+        0% {
+          top: 10%;
+          left: 10%;
+          background-color: red;
+        }
+        25% {
+          top: 30%;
+          left: 30%;
+          background-color: blue;
+        }
+        50% {
+          top: 50%;
+          left: 50%;
+          background-color: green;
+        }
+        75% {
+          top: 70%;
+          left: 70%;
+          background-color: purple;
+        }
+        100% {
+          top: 90%;
+          left: 90%;
+          background-color: orange;
+        }
+      }
+
+      @keyframes spin-and-color {
+        0% {
+          transform: rotate(0deg);
+          color: yellow;
+        }
+        50% {
+          transform: rotate(180deg);
+          color: cyan;
+        }
+        100% {
+          transform: rotate(360deg);
+          color: magenta;
+        }
+      }
+
+      @keyframes grow-and-shrink {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.5);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <MusicPlayer />
+    <nav class="navbar">
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/quienes-somos">Quienes Somos</a></li>
+        <li><a href="/contacto">Contáctanos</a></li>
+        <li><a href="/Redes">Redes</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <h2 class="aberrant-text">¡Contáctanos!</h2>
+      <p>Puedes escribirme a <a href="mailto:info@seg-social.es">info@seg-social.es</a> para decirme lo guapo que soy.</p>
+      <div class="aberrant-image"><img src="/dinero.jpg" alt="Icono"></div>
+      <a class="popup" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <img src="/icon.jpg" alt="Icono">María está a 30 metros de tu casa
+      </a>
+      <a class="popup" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <img src="/icon.jpg" alt="Icono">¡Haz clic aquí para conocer a María!
+      </a>
+      <a class="popup-static" style="bottom: 10%; left: 5%;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <img src="/icon.jpg" alt="Icono">¡María te está esperando!
+      </a>
+      <a class="popup-static" style="bottom: 10%; right: 5%;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <img src="/icon.jpg" alt="Icono">No pierdas la oportunidad
+      </a>
+      <a class="popup-static" style="top: 20%; left: 5%;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <img src="/icon.jpg" alt="Icono">Conoce a María hoy mismo
+      </a>
+      <a class="popup-static" style="top: 20%; right: 5%;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <img src="/icon.jpg" alt="Icono">Última oportunidad para conocer a María
+      </a>
+    </div>
+    <footer>
+      <p>&copy; 2024 CARTEL DE PERÚ NUEVA GENERACIÓN</p>
+    </footer>
+  </body>
+</html>
